@@ -1,0 +1,777 @@
+{
+  "mappings": {
+    "project": {
+      "properties": {
+        "project": {
+          "properties": {
+            "active_prepaid_milestone": {
+              "type": "object"
+            },
+            "assisted": {
+              "type": "boolean"
+            },
+            "attachments": {
+              "properties": {
+                "content_type": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "filename": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "id": {
+                  "type": "long"
+                },
+                "time_submitted": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "url": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "bid_stats": {
+              "properties": {
+                "bid_avg": {
+                  "type": "float"
+                },
+                "bid_count": {
+                  "type": "long"
+                }
+              }
+            },
+            "bidperiod": {
+              "type": "long"
+            },
+            "budget": {
+              "properties": {
+                "maximum": {
+                  "type": "float"
+                },
+                "minimum": {
+                  "type": "float"
+                }
+              }
+            },
+            "currency": {
+              "properties": {
+                "code": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "country": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "exchange_rate": {
+                  "type": "float"
+                },
+                "id": {
+                  "type": "long"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "sign": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "deleted": {
+              "type": "boolean"
+            },
+            "description": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "featured": {
+              "type": "boolean"
+            },
+            "frontend_project_status": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "hidebids": {
+              "type": "boolean"
+            },
+            "hireme": {
+              "type": "boolean"
+            },
+            "id": {
+              "type": "long"
+            },
+            "jobs": {
+              "properties": {
+                "category": {
+                  "properties": {
+                    "id": {
+                      "type": "long"
+                    },
+                    "name": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": {
+                  "type": "long"
+                },
+                "local": {
+                  "type": "boolean"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "seo_url": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "language": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "local": {
+              "type": "boolean"
+            },
+            "location": {
+              "properties": {
+                "country": {
+                  "type": "object"
+                }
+              }
+            },
+            "negotiated": {
+              "type": "boolean"
+            },
+            "nonpublic": {
+              "type": "boolean"
+            },
+            "owner": {
+              "properties": {
+                "chosen_role": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "closed": {
+                  "type": "boolean"
+                },
+                "display_name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "hourly_rate": {
+                  "type": "float"
+                },
+                "id": {
+                  "type": "long"
+                },
+                "limited_account": {
+                  "type": "boolean"
+                },
+                "location": {
+                  "properties": {
+                    "city": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "country": {
+                      "properties": {
+                        "name": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "primary_currency": {
+                  "properties": {
+                    "code": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "country": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "exchange_rate": {
+                      "type": "float"
+                    },
+                    "id": {
+                      "type": "long"
+                    },
+                    "name": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "sign": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    }
+                  }
+                },
+                "primary_language": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "public_name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "registration_date": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "role": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "status": {
+                  "properties": {
+                    "email_verified": {
+                      "type": "boolean"
+                    }
+                  }
+                },
+                "test_user": {
+                  "type": "boolean"
+                },
+                "timezone": {
+                  "properties": {
+                    "country": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "id": {
+                      "type": "long"
+                    },
+                    "offset": {
+                      "type": "float"
+                    },
+                    "timezone": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    }
+                  }
+                },
+                "username": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "owner_id": {
+              "type": "long"
+            },
+            "preview_description": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "selected_bids": {
+              "properties": {
+                "amount": {
+                  "type": "float"
+                },
+                "award_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "bidder": {
+                  "properties": {
+                    "chosen_role": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "closed": {
+                      "type": "boolean"
+                    },
+                    "display_name": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "hourly_rate": {
+                      "type": "float"
+                    },
+                    "id": {
+                      "type": "long"
+                    },
+                    "limited_account": {
+                      "type": "boolean"
+                    },
+                    "location": {
+                      "properties": {
+                        "city": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        },
+                        "country": {
+                          "properties": {
+                            "name": {
+                              "type": "text",
+                              "fields": {
+                                "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "primary_currency": {
+                      "properties": {
+                        "code": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        },
+                        "country": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        },
+                        "exchange_rate": {
+                          "type": "float"
+                        },
+                        "id": {
+                          "type": "long"
+                        },
+                        "name": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        },
+                        "sign": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "primary_language": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "public_name": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "registration_date": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                    "role": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "status": {
+                      "properties": {
+                        "email_verified": {
+                          "type": "boolean"
+                        }
+                      }
+                    },
+                    "test_user": {
+                      "type": "boolean"
+                    },
+                    "timezone": {
+                      "properties": {
+                        "country": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        },
+                        "id": {
+                          "type": "long"
+                        },
+                        "offset": {
+                          "type": "float"
+                        },
+                        "timezone": {
+                          "type": "text",
+                          "fields": {
+                            "keyword": {
+                              "type": "keyword",
+                              "ignore_above": 256
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "username": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    }
+                  }
+                },
+                "bidder_id": {
+                  "type": "long"
+                },
+                "complete_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "frontend_bid_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "highlighted": {
+                  "type": "boolean"
+                },
+                "id": {
+                  "type": "long"
+                },
+                "paid_amount": {
+                  "type": "float"
+                },
+                "paid_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "period": {
+                  "type": "long"
+                },
+                "project_id": {
+                  "type": "long"
+                },
+                "project_owner_id": {
+                  "type": "long"
+                },
+                "retracted": {
+                  "type": "boolean"
+                },
+                "submitdate": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "time_accepted": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "time_awarded": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "time_submitted": {
+                  "type": "date",
+                  "format": "epoch_second"
+                }
+              }
+            },
+            "seo_url": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "status": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "sub_status": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "submitdate": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+            "time_submitted": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+            "title": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "type": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "upgrades": {
+              "properties": {
+                "NDA": {
+                  "type": "boolean"
+                },
+                "active_prepaid_milestone": {
+                  "type": "object"
+                },
+                "assisted": {
+                  "type": "boolean"
+                },
+                "featured": {
+                  "type": "boolean"
+                },
+                "fulltime": {
+                  "type": "boolean"
+                },
+                "nonpublic": {
+                  "type": "boolean"
+                },
+                "qualified": {
+                  "type": "boolean"
+                },
+                "sealed": {
+                  "type": "boolean"
+                },
+                "urgent": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "urgent": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    }
+  }
+}

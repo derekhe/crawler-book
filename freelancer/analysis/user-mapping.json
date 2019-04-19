@@ -1,0 +1,902 @@
+{
+  "mappings": {
+    "user": {
+      "properties": {
+        "user": {
+          "properties": {
+            "avatar": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "avatar_cdn": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "avatar_large": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "avatar_large_cdn": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "badges": {
+              "properties": {
+                "description": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "icon_url": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "id": {
+                  "type": "long"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "time_awarded": {
+                  "type": "date",
+                  "format": "epoch_second"
+                }
+              }
+            },
+            "chosen_role": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "closed": {
+              "type": "boolean"
+            },
+            "display_name": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "employer_reputation": {
+              "properties": {
+                "earnings_score": {
+                  "type": "float"
+                },
+                "entire_history": {
+                  "properties": {
+                    "all": {
+                      "type": "long"
+                    },
+                    "category_ratings": {
+                      "properties": {
+                        "clarity_spec": {
+                          "type": "float"
+                        },
+                        "communication": {
+                          "type": "float"
+                        },
+                        "payment_prom": {
+                          "type": "float"
+                        },
+                        "professionalism": {
+                          "type": "float"
+                        },
+                        "work_for_again": {
+                          "type": "float"
+                        }
+                      }
+                    },
+                    "complete": {
+                      "type": "long"
+                    },
+                    "completion_rate": {
+                      "type": "float"
+                    },
+                    "incomplete": {
+                      "type": "long"
+                    },
+                    "overall": {
+                      "type": "float"
+                    },
+                    "positive": {
+                      "type": "float"
+                    },
+                    "reviews": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "job_history": {
+                  "properties": {
+                    "count_other": {
+                      "type": "long"
+                    },
+                    "job_counts": {
+                      "properties": {
+                        "count": {
+                          "type": "long"
+                        },
+                        "job": {
+                          "properties": {
+                            "category": {
+                              "properties": {
+                                "id": {
+                                  "type": "long"
+                                },
+                                "name": {
+                                  "type": "text",
+                                  "fields": {
+                                    "keyword": {
+                                      "type": "keyword",
+                                      "ignore_above": 256
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "id": {
+                              "type": "long"
+                            },
+                            "local": {
+                              "type": "boolean"
+                            },
+                            "name": {
+                              "type": "text",
+                              "fields": {
+                                "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "last12months": {
+                  "properties": {
+                    "all": {
+                      "type": "long"
+                    },
+                    "category_ratings": {
+                      "properties": {
+                        "clarity_spec": {
+                          "type": "float"
+                        },
+                        "communication": {
+                          "type": "float"
+                        },
+                        "payment_prom": {
+                          "type": "float"
+                        },
+                        "professionalism": {
+                          "type": "float"
+                        },
+                        "work_for_again": {
+                          "type": "float"
+                        }
+                      }
+                    },
+                    "complete": {
+                      "type": "long"
+                    },
+                    "completion_rate": {
+                      "type": "float"
+                    },
+                    "incomplete": {
+                      "type": "long"
+                    },
+                    "overall": {
+                      "type": "float"
+                    },
+                    "positive": {
+                      "type": "float"
+                    },
+                    "reviews": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "last3months": {
+                  "properties": {
+                    "all": {
+                      "type": "long"
+                    },
+                    "category_ratings": {
+                      "properties": {
+                        "clarity_spec": {
+                          "type": "float"
+                        },
+                        "communication": {
+                          "type": "float"
+                        },
+                        "payment_prom": {
+                          "type": "float"
+                        },
+                        "professionalism": {
+                          "type": "float"
+                        },
+                        "work_for_again": {
+                          "type": "float"
+                        }
+                      }
+                    },
+                    "complete": {
+                      "type": "long"
+                    },
+                    "completion_rate": {
+                      "type": "float"
+                    },
+                    "incomplete": {
+                      "type": "long"
+                    },
+                    "overall": {
+                      "type": "float"
+                    },
+                    "positive": {
+                      "type": "float"
+                    },
+                    "reviews": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "project_stats": {
+                  "properties": {
+                    "complete": {
+                      "type": "long"
+                    },
+                    "draft": {
+                      "type": "long"
+                    },
+                    "open": {
+                      "type": "long"
+                    },
+                    "pending": {
+                      "type": "long"
+                    },
+                    "work_in_progress": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "role": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "user_id": {
+                  "type": "long"
+                }
+              }
+            },
+            "hourly_rate": {
+              "type": "float"
+            },
+            "id": {
+              "type": "long"
+            },
+            "jobs": {
+              "properties": {
+                "category": {
+                  "properties": {
+                    "id": {
+                      "type": "long"
+                    },
+                    "name": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    }
+                  }
+                },
+                "id": {
+                  "type": "long"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "limited_account": {
+              "type": "boolean"
+            },
+            "location": {
+              "properties": {
+                "city": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "country": {
+                  "properties": {
+                    "code": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "flag_url": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "flag_url_cdn": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "highres_flag_url": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "highres_flag_url_cdn": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    },
+                    "name": {
+                      "type": "text",
+                      "fields": {
+                        "keyword": {
+                          "type": "keyword",
+                          "ignore_above": 256
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "membership_package": {
+              "properties": {
+                "id": {
+                  "type": "long"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "primary_currency": {
+              "properties": {
+                "code": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "country": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "exchange_rate": {
+                  "type": "float"
+                },
+                "id": {
+                  "type": "long"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "sign": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "primary_language": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "profile_description": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "public_name": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "qualifications": {
+              "properties": {
+                "description": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "icon_name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "icon_url": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "id": {
+                  "type": "long"
+                },
+                "level": {
+                  "type": "long"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "score_percentage": {
+                  "type": "float"
+                },
+                "type": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "user_percentile": {
+                  "type": "float"
+                }
+              }
+            },
+            "registration_date": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+            "reputation": {
+              "properties": {
+                "earnings_score": {
+                  "type": "float"
+                },
+                "entire_history": {
+                  "properties": {
+                    "all": {
+                      "type": "long"
+                    },
+                    "category_ratings": {
+                      "properties": {
+                        "communication": {
+                          "type": "float"
+                        },
+                        "expertise": {
+                          "type": "float"
+                        },
+                        "hire_again": {
+                          "type": "float"
+                        },
+                        "professionalism": {
+                          "type": "float"
+                        },
+                        "quality": {
+                          "type": "float"
+                        }
+                      }
+                    },
+                    "complete": {
+                      "type": "long"
+                    },
+                    "completion_rate": {
+                      "type": "float"
+                    },
+                    "incomplete": {
+                      "type": "long"
+                    },
+                    "incomplete_reviews": {
+                      "type": "long"
+                    },
+                    "on_budget": {
+                      "type": "float"
+                    },
+                    "on_time": {
+                      "type": "float"
+                    },
+                    "overall": {
+                      "type": "float"
+                    },
+                    "positive": {
+                      "type": "float"
+                    },
+                    "reviews": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "job_history": {
+                  "properties": {
+                    "count_other": {
+                      "type": "long"
+                    },
+                    "job_counts": {
+                      "properties": {
+                        "count": {
+                          "type": "long"
+                        },
+                        "job": {
+                          "properties": {
+                            "category": {
+                              "properties": {
+                                "id": {
+                                  "type": "long"
+                                },
+                                "name": {
+                                  "type": "text",
+                                  "fields": {
+                                    "keyword": {
+                                      "type": "keyword",
+                                      "ignore_above": 256
+                                    }
+                                  }
+                                }
+                              }
+                            },
+                            "id": {
+                              "type": "long"
+                            },
+                            "local": {
+                              "type": "boolean"
+                            },
+                            "name": {
+                              "type": "text",
+                              "fields": {
+                                "keyword": {
+                                  "type": "keyword",
+                                  "ignore_above": 256
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "last12months": {
+                  "properties": {
+                    "all": {
+                      "type": "long"
+                    },
+                    "category_ratings": {
+                      "properties": {
+                        "communication": {
+                          "type": "float"
+                        },
+                        "expertise": {
+                          "type": "float"
+                        },
+                        "hire_again": {
+                          "type": "float"
+                        },
+                        "professionalism": {
+                          "type": "float"
+                        },
+                        "quality": {
+                          "type": "float"
+                        }
+                      }
+                    },
+                    "complete": {
+                      "type": "long"
+                    },
+                    "completion_rate": {
+                      "type": "float"
+                    },
+                    "incomplete": {
+                      "type": "long"
+                    },
+                    "incomplete_reviews": {
+                      "type": "long"
+                    },
+                    "on_budget": {
+                      "type": "float"
+                    },
+                    "on_time": {
+                      "type": "float"
+                    },
+                    "overall": {
+                      "type": "float"
+                    },
+                    "positive": {
+                      "type": "float"
+                    },
+                    "reviews": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "last3months": {
+                  "properties": {
+                    "all": {
+                      "type": "long"
+                    },
+                    "category_ratings": {
+                      "properties": {
+                        "communication": {
+                          "type": "float"
+                        },
+                        "expertise": {
+                          "type": "float"
+                        },
+                        "hire_again": {
+                          "type": "float"
+                        },
+                        "professionalism": {
+                          "type": "float"
+                        },
+                        "quality": {
+                          "type": "float"
+                        }
+                      }
+                    },
+                    "complete": {
+                      "type": "long"
+                    },
+                    "completion_rate": {
+                      "type": "float"
+                    },
+                    "incomplete": {
+                      "type": "long"
+                    },
+                    "incomplete_reviews": {
+                      "type": "long"
+                    },
+                    "on_budget": {
+                      "type": "float"
+                    },
+                    "on_time": {
+                      "type": "float"
+                    },
+                    "overall": {
+                      "type": "float"
+                    },
+                    "positive": {
+                      "type": "float"
+                    },
+                    "reviews": {
+                      "type": "long"
+                    }
+                  }
+                },
+                "role": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "user_id": {
+                  "type": "long"
+                }
+              }
+            },
+            "role": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "status": {
+              "properties": {
+                "deposit_made": {
+                  "type": "boolean"
+                },
+                "email_verified": {
+                  "type": "boolean"
+                },
+                "facebook_connected": {
+                  "type": "boolean"
+                },
+                "identity_verified": {
+                  "type": "boolean"
+                },
+                "payment_verified": {
+                  "type": "boolean"
+                },
+                "phone_verified": {
+                  "type": "boolean"
+                },
+                "profile_complete": {
+                  "type": "boolean"
+                }
+              }
+            },
+            "tagline": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "test_user": {
+              "type": "boolean"
+            },
+            "timezone": {
+              "properties": {
+                "country": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "id": {
+                  "type": "long"
+                },
+                "offset": {
+                  "type": "float"
+                },
+                "timezone": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "username": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

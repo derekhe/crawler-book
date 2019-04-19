@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="derekhe">
+
+    <title>Freelancer Report</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css">
+    <link rel="stylesheet" href="css/my.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <script src="lib/js/echarts.min.js"></script>
+    <script src="lib/js/world.js"></script>
+    <script src="lib/js/lodash.min.js"></script>
+    <script src="lib/js/dark.js"></script>
+    <script src="lib/js/infographic.js"></script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>FREELANCER.COM</h1>
+            <h3>全站数据分析报告</h3>
+            <p>
+                <small>By <a href="http://github.com/derekhe">derekhe</a></small>
+            </p>
+        </section>
+
+        <section data-background="#B33A3A">
+            <h2>声明</h2>
+            <p>
+                该报告仅作为研究及学习使用<br/>
+                数据的真实性及完整性不作任何保证<br/>
+            </p>
+        </section>
+
+        <section>
+            <h3>网站背景</h3>
+            <p>
+                Freelancer.com成立于2009年，后收购了数家自由职业者公司</br>
+                成为世界上自由职业者相关网站的领头羊</br>
+                分析该网站的数据能够窥见自由职业的现状和发展趋势</br>
+            </p>
+        </section>
+
+        <section>
+            <h3>数据来源</h3>
+            <p>
+                该报告数据来源于<a href="https://www.freelancer.com/api/docs/docs.html"
+                           target="_blank">Freelancer.com的公开API</a></br>
+                采集了从2000年到2017年3月的上千万的数据</br>
+                包含项目、用户、投标、用户评价数据</br>
+            </p>
+        </section>
+
+        <section>
+            <h3>采集数据和网站数据对比</h3>
+            <div class="flex-center">
+                <div id="project-user" style="width: 400px;height:350px;"></div>
+                <div class="normal-text">
+                    <p>
+                        从采集到的数据来看，则项目数量在740万左右，用户数量在1700万，两者相差大约56%和35%左右。
+                    </p>
+                    <p>
+                        项目数和用户数总体上都存在一些差异，差异可能来自于不同的统计方式。
+                    </p>
+                </div>
+            </div>
+
+            <script src='./js/data-compare.js'></script>
+        </section>
+
+        <section>
+            <h3>项目和用户增长情况</h3>
+            <div class="flex-center">
+                <div id="user-project" style="width: 1000px;height:480px;"></div>
+            </div>
+            <p class="normal-text center-text">
+                Freelaner的用户规模和项目规模在加速增长中，预计在2018年初突破2000万用户和800万项目。
+            </p>
+
+            <script src='./js/user-project-increase.js'></script>
+        </section>
+
+        <section>
+            <h3>会员分布</h3>
+            <div class="flex-center">
+                <div class="normal-text">
+                    <p>
+                        在Freelancer的会员体系中，免费的会员有1727万名，占据了99.66%（图中无标示）。
+                    </p>
+                    <p>
+                        付费会员总共有5.8万，免费和付费会员比为295:1。
+                    </p>
+                    <p>
+                        注：其中有一些会员类型可能是Freelancer之前的老会员类型。
+                    </p>
+                </div>
+                <div id="user-members" style="width: 640px;height:480px;"></div>
+            </div>
+
+            <script src='./js/members.js'></script>
+        </section>
+
+        <section>
+            <h4>自由职业者全球分布</h4>
+            <div class="flex-center">
+                <div id="user-country" style="width: 900px;height:500px;"></div>
+            </div>
+            <p class="normal-text center-text">
+                全球分布中，以美国和印度为第一梯队<br/>
+                菲律宾、印度尼西亚、巴基斯坦紧为第二梯队<br/>
+                英国、澳大利亚、孟加拉国紧跟其后，巴西等国家也有较大的比重<br/>
+            </p>
+
+            <script src='./js/freelancer-distribution.js'></script>
+        </section>
+
+        <section>
+            <h4>项目所有者全球分布</h4>
+            <div class="flex-center">
+                <div id="owner-country" style="width: 900px;height:500px;"></div>
+            </div>
+            <p class="normal-text center-text">
+                和自由职业者分布类似，美国和印度的项目占领了很大的份额<br/>
+                英国、澳大利亚、加拿大等发达国家保持着稳定的市场<br/>
+                菲律宾、巴基斯坦跟随其后，这些项目很有可能是二次外包的项目<br/>
+            </p>
+
+            <script src='js/owner-bid-distribution.js'></script>
+        </section>
+
+        <section>
+            <h4>业务种类分布</h4>
+            <div class="flex-center">
+                <div id="category" style="width: 1100px;height:300px;"></div>
+            </div>
+            <p class="normal-text center-text">
+                网站35%的项目都是网站建设和软件相关业务，有23%的项目是设计类的项目，10%的是写作和内容类项目。这三类项目占据了7成以上的份额。
+            </p>
+
+            <script src='./js/category.js'></script>
+        </section>
+
+        <section>
+            <h4>具体业务分布</h4>
+            <div class="flex-center">
+                <div id="category-detail" style="width: 1100px;height:300px;"></div>
+            </div>
+            <p class="normal-text center-text">
+                在具体的业务分布中，前60%的市场都和网站建设和设计有关。其中PHP占据了20%的市场，这和WordPress等基于PHP的CMS网站建设有很大关系。Graphic Design占据12%的市场，紧接着又是网站建设。其他的类型则市场相对较小。
+            </p>
+
+            <script src='js/category-more.js'></script>
+        </section>
+
+
+        <section>
+            <h3>价值迁移图</h3>
+            <p class="small-text center-text">
+                此图展示了项目价值的流动方向，可以看欧美、澳洲有项目和资金的大量流出。印度、巴基斯坦作为外包大国，有非常多的项目和资金流入。全球外包的中心图中可见一斑。
+            </p>
+
+            <div class="flex-center">
+                <div id="movement" style="width: 1000px;height:550px;"></div>
+            </div>
+            <script src='./js/value-movement.js'></script>
+        </section>
+
+        <section>
+            <h3>全球接单数Top20</h3>
+            <div class="flex-center">
+                <div id="user-top20" style="width: 1000px;height:480px;"></div>
+            </div>
+            <p class="normal-text center-text">
+                不出所料，全球接单数最多的20名自由职业中，来自于印度、巴基斯坦、菲律宾等欠发达国家的最多。
+                但接单数多并不意味着赚取的钱最多，接单数最多的平均每单才1美元不到，而最高的也才25美元，
+                说明在这些国家接的单都是价格低廉的单，总体赚钱不多。
+            </p>
+
+            <script src='./js/top-world.js'></script>
+        </section>
+
+        <section>
+            <h5>Top 20接单种类分析</h5>
+            <div class="flex-center">
+                <div id="user-top20-detail" style="width: 1000px;height:480px;"></div>
+            </div>
+            <p class="normal-text center-text">
+                图标、媒体设计类是最多的单，其中Graphic Design和Logo Design占据了最多的份额。<br/>
+                其次是网站建设，在网站建设中PHP依然是很火的，和WordPress等PHP架构的网站息息相关。<br/>
+            </p>
+
+            <script src='./js/top-world-analysis.js'></script>
+        </section>
+
+        <section>
+            <h3>中国接单数Top20</h3>
+            <div class="flex-center">
+                <div id="china-top20" style="width: 1000px;height:400px;"></div>
+            </div>
+            <p class="small-text center-text">
+                虽然在全世界范围内中国的自由职业者不算太多，但对比全球接单最多的国家（印度、巴基斯坦等）<br/>中国的自由职业者平均每单的价格均超过了15美元，这应该和中国的实际消费水平相关。
+            <p>
+            <p class="small-text center-text">
+                与全球类似，第一名SunrisePHP为了和其他国家的低价竞争，只能以低价取胜，虽然数量很多但整体收入欠佳。<br/>
+                形成鲜明对比的zhengnami13，平均每单价格高的700美元，与选择的高质量的工程的性质有关。
+            </p>
+
+            <script src='./js/china-top.js'></script>
+        </section>
+
+        <section>
+            <h3>用户zhengnami13收入分析</h3>
+            <p class="small-text center-text">
+                从<a href="https://www.freelancer.com/u/zhengnami13.html">自我介绍</a>上可以看到，该用户来自于中国的沈阳。
+                从2013年4月加入，Rate为50$每小时，擅长移动开发。
+                该用户最低每单都在860$以上，每月最低都有2000$以上的收入，几乎每月都有3个以上的单，接单质量相对较高。
+            </p>
+            <div class="flex-center">
+                <div id="user-analysis" style="width: 1000px;height:400px;"></div>
+                <script src='./js/zhengnami13.js'></script>
+            </div>
+        </section>
+
+        <section>
+            <h3>用户zhengnami13接单类型和客户分析</h3>
+            <div class="flex-center">
+                <div id="user-customer-analysis" style="width: 800px;height:400px;"></div>
+                <script src='./js/zhangnami13-detail.js'></script>
+            </div>
+            <p class="small-text center-text">
+                该用户主攻方向和描述一致，主要是涉及到移动领域的开发。具体来讲iOS的比Android开发更多，纯HTML5的开发也占有少量的比例。
+                该用户的客户主要是欧美和澳洲的客户，这些客户质量要求高、资金雄厚，<br/>做好这些客户也可以给自己打下良好的口碑的基础。
+            </p>
+        </section>
+
+        <section>
+            <h1>谢谢</h1>
+        </section>
+    </div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="lib/js/reveal.js"></script>
+
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        history: true
+    });
+</script>
+</body>
+</html>

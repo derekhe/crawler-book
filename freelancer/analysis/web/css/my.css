@@ -1,0 +1,42 @@
+.warning {
+    background: #ff3400;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-center > div {
+    margin: 20px;
+}
+
+.normal-text {
+    text-align: start;
+    font-size: 60% !important;
+}
+
+.small-text {
+    text-align: start;
+    font-size: 50% !important;
+}
+
+.tiny-text {
+    text-align: start;
+    font-size: 20% !important;
+}
+
+.slides {
+    width: 1100px !important;
+    height: 720px !important;
+    zoom: 1 !important;
+}
+
+.center-text {
+    text-align: center !important;
+}
+
+.reveal p {
+    margin: 20px 50px 20px 50px;
+}

@@ -1,0 +1,198 @@
+{
+  "mappings": {
+    "userreview": {
+      "properties": {
+        "userreview": {
+          "properties": {
+            "bid_amount": {
+              "type": "float"
+            },
+            "currency": {
+              "properties": {
+                "code": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "country": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "exchange_rate": {
+                  "type": "float"
+                },
+                "id": {
+                  "type": "long"
+                },
+                "name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "sign": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "description": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "from_user_id": {
+              "type": "long"
+            },
+            "paid_amount": {
+              "type": "float"
+            },
+            "project_id": {
+              "type": "long"
+            },
+            "rating": {
+              "type": "float"
+            },
+            "rating_details": {
+              "properties": {
+                "category_ratings": {
+                  "properties": {
+                    "communication": {
+                      "type": "float"
+                    },
+                    "expertise": {
+                      "type": "float"
+                    },
+                    "hire_again": {
+                      "type": "float"
+                    },
+                    "professionalism": {
+                      "type": "float"
+                    },
+                    "quality": {
+                      "type": "float"
+                    }
+                  }
+                },
+                "on_budget_display": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "on_time_display": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "review_context": {
+              "properties": {
+                "context_id": {
+                  "type": "long"
+                },
+                "context_name": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "review_type": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "seo_url": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                }
+              }
+            },
+            "review_project_status": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "role": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "sealed": {
+              "type": "boolean"
+            },
+            "status": {
+              "type": "text",
+              "fields": {
+                "keyword": {
+                  "type": "keyword",
+                  "ignore_above": 256
+                }
+              }
+            },
+            "submitdate": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+            "time_submitted":{
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+            "to_user_id": {
+              "type": "long"
+            }
+          }
+        }
+      }
+    }
+  }
+}

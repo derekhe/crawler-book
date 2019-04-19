@@ -1,0 +1,98 @@
+{
+  "mappings": {
+    "bids": {
+      "properties": {
+        "bids": {
+          "properties": {
+            "bids": {
+              "properties": {
+                "amount": {
+                  "type": "float"
+                },
+                "award_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "bidder_id": {
+                  "type": "long"
+                },
+                "complete_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "frontend_bid_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "highlighted": {
+                  "type": "boolean"
+                },
+                "id": {
+                  "type": "long"
+                },
+                "milestone_percentage": {
+                  "type": "long"
+                },
+                "paid_amount": {
+                  "type": "float"
+                },
+                "paid_status": {
+                  "type": "text",
+                  "fields": {
+                    "keyword": {
+                      "type": "keyword",
+                      "ignore_above": 256
+                    }
+                  }
+                },
+                "period": {
+                  "type": "long"
+                },
+                "project_id": {
+                  "type": "long"
+                },
+                "project_owner_id": {
+                  "type": "long"
+                },
+                "retracted": {
+                  "type": "boolean"
+                },
+                "submitdate": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "time_accepted": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "time_awarded": {
+                  "type": "date",
+                  "format": "epoch_second"
+                },
+                "time_submitted": {
+                  "type": "date",
+                  "format": "epoch_second"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

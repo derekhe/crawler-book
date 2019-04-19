@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+  <title>骑行路线规划</title>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=MkTzvaspXqDpNG1eYmMQvZGyK9DoHEkH"></script>
+  <script src="./js/papaparse.min.js"></script>
+  <script src="./js/convert.js"></script>
+  <style type="text/css">
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      font-family: "微软雅黑";
+    }
+
+    #l-map {
+      height: 800px;
+      width: 1200px;
+    }
+
+    #container {
+      display: inline-flex;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="l-map"></div>
+    <div id="r-result"></div>
+  </div>
+  <script src="route.js"></script>
+</body>
+
+</html>
